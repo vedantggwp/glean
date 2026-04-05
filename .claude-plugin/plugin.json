@@ -1,0 +1,21 @@
+{
+  "name": "glean",
+  "version": "1.0.0",
+  "description": "Passive reflective capture from Claude Code sessions. Extracts story fragments - moments of surprise, friction, and decision - before they evaporate.",
+  "author": {
+    "name": "Ved Gaikwad",
+    "url": "https://github.com/findtheved"
+  },
+  "repository": "https://github.com/findtheved/glean",
+  "license": "MIT",
+  "keywords": [
+    "obsidian",
+    "notes",
+    "ideas",
+    "reflection",
+    "knowledge",
+    "writing",
+    "capture",
+    "extraction"
+  ]
+}
