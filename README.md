@@ -3,6 +3,7 @@
 **Your coding sessions are full of insights you're losing. glean catches them.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![CI](https://github.com/vedantggwp/glean/actions/workflows/ci.yml/badge.svg)](https://github.com/vedantggwp/glean/actions/workflows/ci.yml)
 [![Claude Code Plugin](https://img.shields.io/badge/Claude%20Code-Plugin-7C3AED)](https://docs.claude.com/claude-code)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![Platform: macOS | Linux](https://img.shields.io/badge/platform-macOS%20%7C%20Linux-lightgrey)]()
@@ -228,13 +229,21 @@ No. The SessionEnd hook writes a queue file and forks the worker in the backgrou
 
 ## Contributing
 
-Issues and PRs welcome. Keep scope tight:
+Issues and PRs welcome. See `CONTRIBUTING.md` for setup and PR expectations.
+Keep scope tight:
 
 - Worker stays stdlib-only (no pip dependencies)
 - Hooks stay dumb (queue + fork, no LLM calls)
 - New writers go under `scripts/glean/writers/` implementing the `Writer` protocol
 
 See `CONTRACTS.md` for interface definitions between components.
+
+Local verification:
+
+```bash
+python3 -m compileall scripts
+PYTHONPATH="$PWD/scripts" python3 -m unittest discover -s tests -v
+```
 
 ## License
 
